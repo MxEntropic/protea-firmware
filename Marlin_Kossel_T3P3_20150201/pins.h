@@ -356,6 +356,8 @@
 #define SDPOWER            -1
 #define SDSS               53
 #define LED_PIN            13
+//Ko added 15012018
+#define UV_PIN             4
 
 #if MOTHERBOARD == 33
 #define FAN_PIN            9 // (Sprinter config)

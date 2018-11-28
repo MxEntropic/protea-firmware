@@ -86,7 +86,7 @@
 #define DELTA_DIAGONAL_ROD 215.0 // mm (T3P3, default 215)
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 144.7 // mm  (T3P3, default 145) //145.1 = redkossel
+#define DELTA_SMOOTH_ROD_OFFSET 144.6 // mm  (T3P3, default 145) //145.1 = redkossel
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 19.9 // mm (T3P3, default 19.9)
@@ -240,9 +240,10 @@
 #ifdef PIDTEMPBED
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-    #define  DEFAULT_bedKp 10.00
-    #define  DEFAULT_bedKi .023
-    #define  DEFAULT_bedKd 305.4
+//from PID autotune 08/06/2018
+    #define  DEFAULT_bedKp 295.39
+    #define  DEFAULT_bedKi 29.65
+    #define  DEFAULT_bedKd 735.60
 
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from pidautotune
@@ -355,7 +356,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // For deltabots this means top and center of the cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 257.8 // T3P3, with V6 and heated bed. With J-head and no heated bed start at 255
+#define MANUAL_Z_HOME_POS 250.4 // 259.0 without UV, 250/247.0 with u (iterate)
 
 #define AUTOLEVEL_GRID 22  // Distance between autolevel Z probing points, should be less than print surface radius/3.
 
